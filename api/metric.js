@@ -105,7 +105,8 @@ router.route('/metrics/test/1/')
 	.post(function(req,res){
 		var data = req.body.data
 		var array_data = data.split(",")
-
+		console.log(data)
+		console.log(array_data)
 		var fecha = array_data[3];
 		var hora = array_data[5];
 		var litros = array_data[1];
