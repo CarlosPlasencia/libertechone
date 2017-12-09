@@ -97,6 +97,12 @@ router.route('/metrics/generar-data/')
 // CREATE
 router.route('/metrics/test')
 	.post(function(req,res){
+		console.log( req.body.data )
+		res.send("Gracias")
+	})
+
+router.route('/metrics/test/1/')
+	.post(function(req,res){
 		var data = req.body.data
 		var array_data = data.split(",")
 
