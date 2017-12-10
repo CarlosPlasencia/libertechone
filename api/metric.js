@@ -131,7 +131,7 @@ router.route('/metrics/test/1/')
 
 		var fecha = mes+"/"+dia+"/"+año;
 		var hora = array_data[5];
-		var litros = array_data[1];
+		var litros = parseInt(array_data[1]);
 		var user_id = "carlos01";
 
 		var metrica = new Metric({ 
@@ -152,12 +152,12 @@ router.route('/metrics')
 		var array_data = data.split(",")
 		var array_fecha = array_data[3].split("/")
 		var dia = array_fecha[0]
-		var hora = array_fecha[1]
+		var mes = array_fecha[1]
 		var año = array_fecha[2]
 
-		var fecha = mes+"/"+dia+"/"+hora;
+		var fecha = mes+"/"+dia+"/"+año;
 		var hora = array_data[5];
-		var litros = array_data[1];
+		var litros = parseInt(array_data[1]);
 		var user_id = "carlos01";
 
 		var metrica = new Metric({ 
